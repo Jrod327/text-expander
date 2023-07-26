@@ -40,7 +40,7 @@ function TextExpander({
 	collapsedNumWords = 10,
 	expandButtonText = "Expand",
 	collapseButtonText = "Collapse",
-	buttonColor,
+	buttonColor = "blue",
 	expanded = false,
 	className,
 	onSetExpanded
@@ -63,7 +63,7 @@ function TextExpander({
 	return (
 		<div className={className || ""}>
 			{isExpanded ? handleTruncate(children, collapsedNumWords) : children}
-			<button style={{ backgroundColor: buttonColor }} onClick={handleExpand}>
+			<button style={{ color: buttonColor }} onClick={handleExpand}>
 				{isExpanded ? expandButtonText : collapseButtonText}
 			</button>
 		</div>
